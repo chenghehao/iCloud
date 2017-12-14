@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body onselectstart="return false;">
+  <div class="container-fluid fs-wrap">
+    <header class="navbar navbar-default navbar-cus-set">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="javascript:;" class="navbar-brand logos">
+              <div class="logo">
+                  <img src="img/logo.png" alt="">
+              </div>
+          </a>
+          <div class="navbar-toggle collapsed" id="toggleMenuBtn">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <div class="nav navbar-nav nav-bar-btns center-block" id="funBtns">
+            <button class="btn btn-default navbar-btn" id="newDir">
+              <span class="glyphicon glyphicon-plus"></span> 新建文件夹
+            </button>
+            <button class="btn btn-default navbar-btn" id="rmFile">
+              <span class="glyphicon glyphicon-remove"></span> 删除文件
+            </button>
+            <button class="btn btn-default navbar-btn" id="reName">
+              <span class="glyphicon glyphicon-pencil"></span> 重命名文件
+            </button>
+            <button class="btn btn-default navbar-btn" id="moveFile">
+              <span class="glyphicon glyphicon-move"></span> 移动到
+            </button>
+            <button class="btn btn-default navbar-btn" disabled="disabled" id="upLoad">
+              <span class="glyphicon glyphicon-open"></span> 上传文件
+            </button>
+            <button class="btn btn-default navbar-btn" id="shuaxin">
+              <span class="glyphicon glyphicon-refresh"></span> 刷新
+            </button>
+            <button class="btn btn-default navbar-btn" id="shezhi">
+              <span class="glyphicon glyphicon-recover" ></span> 🌟  恢复出厂设置
+            </button>
+          </div>
+          <div class="navbar-form navbar-right navbar-form-cus">
+            <div class="touxiang"></div>
+            <span class="setting">
+              <span class="sp1"><i></i></span>
+              <span class="sp2"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="panel panel-default panel-cus-set crumbs">
+      <div class="panel-body">
+        <nav class="breadcrumb" id="breadCrumb">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Library</a></li>
+          <li><a href="">Data</a></li>
+        </nav>
+      </div>
+    </div>
+    <div class="container-fluid fs-container-wrap">
+      <div class="row fs-container" id="fsContainer">
+        
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 file-item">
+          <div class="file-wrap checked">
+            <div class="file-check">
+              <span class="glyphicon glyphicon-ok file-check-active"></span>
+            </div>
+            <div class="file-check-click"></div>
+            <div class="file-img"></div>
+            <div class="file-name">
+              <p class="name-text show" title="文件夹">文件夹</p>
+              <input type="text" class="name-input">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="empty-info" id="emptyInfo">
+        <span></span>
+        <span class="spantext">当前目录为空</span>
+      </div>
+    </div>
+    <div class="container-fluid fs-footer">
+      <div class="row">
+        <div class="col-lg-1 col-md-2 col-sm-2 col-xs-3 check-all-wrap">
+          <label for="checkAllBox" class="check-all-text">全选: </label>
+          <div class="check-all" id="checkAllBox">
+            <span class="glyphicon glyphicon-ok check-all-active"></span>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5 check-num-info">
+          已选中: <span id="checkedFileNum">0</span> 个文件
+        </div>
+        <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4 hidden-xs system-time pull-right">
+          <time class="time-text" id="clock">11:11:11</time>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 pull-right alert-message">
+          <span class="message-info" id="alertInfo"></span>
+        </div>
+      </div>
+    </div>
+    <div class="fs-dialog" id="fsDialog">
+    </div>
+  </div>
+</body>
+<script src="./js/tools.js"></script>
+<script src="./js/clock.js"></script>
+<script src="./js/headerMenu.js"></script>
+<script src="./db/db.js"></script>
+<script src="./js/createHtml.js"></script>
+<script src="./js/index.js"></script>
+</html>
